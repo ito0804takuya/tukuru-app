@@ -3,7 +3,6 @@
 // $(document).on('turbolinks:load', function() {
 window.onload = function(){
 // window.onload = jQuery(function($){ 
-  console.log("test")
   let fileField = $('#file');
   
   // 選択された画像を取得し表示

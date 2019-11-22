@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @all_jobs = Job.all
+    @all_jobs = Job.all.page(params[:page]).per(4).order('updated_at DESC')
   end
 
   def new

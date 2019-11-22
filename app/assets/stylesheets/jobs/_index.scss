@@ -44,11 +44,11 @@
     width: 1000px;
     height: auto;
     margin: 30px auto;
-    // text-decoration: none;
-    // border: none;
     &__job {
       background-color: white;
+      border: 1px solid #ccc;
       border-radius: 15px;
+      box-sizing: border-box;
       height: 280px;
       margin: 0 10px 20px;
       overflow: hidden;
@@ -85,4 +85,23 @@
   background: rgba(255,255,255,0.5);
   height: 100%;
   width: 100%;
+}
+.page_box {
+  height: 50px;
+  margin: 0 auto;
+  width: 1000px;
+  text-align: center;
+  .pagination{
+    margin: 0;
+    li{
+      a {
+        color: #696969;   /*文字の色を変える*/
+      }
+    }
+    .active{
+      a {
+        background: #93c9ff;   
+      }
+    }
+  }
 }
