@@ -1,0 +1,180 @@
+.wrapper
+  = render partial: "layouts/header"
+  - if company_signed_in?
+    .new-btn
+      = link_to new_job_path do
+        .new-btn__icon
+          = fa_icon 'plus'
+        .new-btn__text
+          新しい求人を
+          %br
+          載せる
+  .body
+    .back-img
+      .body__box
+        - @all_jobs.each do |job|
+          .body__box__job
+            = link_to root_path do
+              .body__box__job__img
+                - if Rails.env.development?
+                  = image_tag "/uploads/image/image/#{job.images.ids[0]}/"+job.images[0][:image], size:'230x180'
+                - if Rails.env.production?
+                  = image_tag job.images[0].image.url
+              .body__box__job__text
+                .body__box__job__text__name
+                  = job.name
+                .body__box__job__text__detail
+                  = job.body
+                .body__box__job__text__prefecture
+                  = job.prefecture.name
+        
+            -# = link_to(item_path(item.id), method: :get, class: "category__new-items__itembox__item itembox__item") do
+            -#   .item
+            -#     - if item.buyer_id.present?
+            -#       .item__sold-text SOLD
+            -#       .item__soldout
+            -#     .category__new-items__itembox__item__image.item__image
+            -#       - if Rails.env.development?
+            -#         = image_tag "/uploads/image/image/#{item.images.ids[0]}/"+item.images[0][:image], class: "category__new-items__itembox__item__image-url item__image-url"
+            -#       - if Rails.env.production?
+            -#         = image_tag item.images[0].image.url, class: "category__new-items__itembox__item__image-url item__image-url"
+            -#       .category__new-items__itembox__item__image__price.item__image__price
+            -#         = "¥#{item.price}"
+            -#     .category__new-items__itembox__item__name.item__name
+            -#       = item.name
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+        .body__box__job
+          .body__box__job__img
+          .body__box__job__text
+            .body__box__job__text__name
+              メーカー名㈱
+            .body__box__job__text__detail
+              半導体のアセンブリ加工をやってみませんか？初心者歓迎！
+            .body__box__job__text__prefecture
+              大阪府
+  = render partial: "layouts/footer"

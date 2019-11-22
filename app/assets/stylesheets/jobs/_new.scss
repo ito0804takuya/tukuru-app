@@ -1,0 +1,131 @@
+.newjob {
+  margin: 100px 0 0;
+  background-color: #f7f7f7;
+  padding: 30px 0;
+  width: 100%;
+  &__head {
+    font-size: 18px;
+    margin: 0 auto 10px;
+    width: 600px;
+  }
+  &__box {
+    background-color: white;
+    border: 1px solid #eae6dc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 0 25px;
+    margin: 0 auto;
+    width: 600px;
+    &__title {
+      display: flex;
+      height: 30px;
+      line-height: 30px;
+      margin: 20px 0 0;
+    }
+    &__name {
+      font-size: 20px;
+      margin: 0 10px;
+    }
+    
+  }
+}
+#mark {
+  background: #ea352d;
+  padding: 0 3px;
+  margin: 0 0 4px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 28px;
+}
+#title {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  width: 130px;
+}
+.newjob-form {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: block;
+  height: 40px;
+  outline: none;
+  padding: 0 5px;
+  margin: 0 10px;
+  width: 100%;
+}
+.newjob-textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 150px;
+  outline: none;
+  padding: 0 5px;
+  margin: 0 10px;
+  max-width: 100%;
+  width: 100%;
+}
+.newjob-select {
+  background: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: block;
+  height: 40px;
+  outline: none;
+  padding: 0 5px;
+  margin: 0 10px;
+  width: 100%;
+}
+
+#img_field {
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 5px 8px;
+  border: solid 1px #EDBC6C;
+  color: #666;
+  position: relative;
+  padding: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 460px;
+  height: 360px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: 0.3s ease-out;
+  text-align: center;
+}
+
+#img_field i {
+  font-size: 100px;
+  color: #aaa;
+  line-height: 360px;
+  transition: 0.3s ease-out;
+}
+
+#img_field i.add {
+  display: none;
+  font-size: 50px;
+  position: absolute;
+  top: -90px;
+  right: 15px;
+}
+
+#img_field:hover {
+  background-color: #EDBC6C;
+  transition: 0.3s ease-out;
+  opacity: 0.9;
+  
+}
+
+#img_field:hover i {
+  transition: 0.3s ease-out;
+  display: block;
+  color: #fff;
+  
+}

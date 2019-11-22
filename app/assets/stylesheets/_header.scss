@@ -1,0 +1,53 @@
+.header {
+  background-color: white;
+  border-bottom: 1px solid #eae6dc;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  &__text {
+    background-color: #deb887;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+  &__bar {
+    display: flex;
+    height: 70px;
+    margin: 0 auto;
+    line-height: 70px;
+    width: 1000px;
+    &__logo {
+      transform: scale(1.1, 1);
+    }
+    &__search {
+      width: 40px;
+      margin: 0 0 0 auto;
+    }
+    &__signup {
+    }
+  }
+}
+.tukuru-logo {
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+}
+.search-icon {
+  font-size: 20px;
+}
+.signup-btn {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+}

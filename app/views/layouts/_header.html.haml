@@ -1,0 +1,18 @@
+.header
+  .header__text
+    もの作り と 創る人 をつなぐサイト
+  .header__bar
+    .header__bar__logo
+      = link_to("TUKURU", root_path, class:"tukuru-logo")
+    .header__bar__search
+      = fa_icon 'search', class:"search-icon"
+    - if company_signed_in?
+      .header__bar__signup
+        = link_to("マイページ", root_path, class:"signup-btn")
+    - elsif seeker_signed_in?
+      .header__bar__signup
+        = link_to("マイページ", root_path, class:"signup-btn")
+    - else
+      .header__bar__signup
+        = link_to("新規登録（求人を掲載される方）", new_company_registration_path, class:"signup-btn")
+        = link_to("新規登録（求人をお探しの方）", new_seeker_registration_path, class:"signup-btn")
