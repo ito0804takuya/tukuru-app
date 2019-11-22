@@ -79,11 +79,16 @@
   width: 100%;
 }
 
+.field-image {
+  // padding: 0 10px;
+  margin: 0 10px;
+  width: 500px;
+}
 #img_field {
   font-size: 15px;
   margin-top: 10px;
   padding: 5px 8px;
-  border: solid 1px #EDBC6C;
+  border: 1px solid #ccc;
   color: #666;
   position: relative;
   padding: 0;
@@ -100,14 +105,12 @@
   transition: 0.3s ease-out;
   text-align: center;
 }
-
 #img_field i {
   font-size: 100px;
   color: #aaa;
   line-height: 360px;
   transition: 0.3s ease-out;
 }
-
 #img_field i.add {
   display: none;
   font-size: 50px;
@@ -115,17 +118,53 @@
   top: -90px;
   right: 15px;
 }
-
 #img_field:hover {
   background-color: #EDBC6C;
   transition: 0.3s ease-out;
   opacity: 0.9;
   
 }
-
 #img_field:hover i {
   transition: 0.3s ease-out;
   display: block;
   color: #fff;
   
+}
+.btn-field{
+  display: flex;
+  margin: 20px auto;
+  width: 500px;
+}
+#submit-btn {
+  box-sizing: border-box;
+  background-color: brown;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  margin: 0 20px 0 0;
+  padding: 8px 10px;
+  text-align: center;
+  height: 40px;
+  width: 100px;
+}
+#cancel-btn {
+  box-sizing: border-box;
+  display: block;
+  background-color: rgb(216, 216, 216);
+  border-color: rgb(216, 216, 216);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  text-align: center;
+  height: 40px;
+  width: 100px;
+  a {
+    display: block;
+    color: rgb(92, 88, 88);
+    line-height: 40px;
+    border: none;
+    text-decoration: none;
+  }
 }

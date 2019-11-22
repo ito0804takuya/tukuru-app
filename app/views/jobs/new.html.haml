@@ -70,26 +70,9 @@
                   -# %i.fas.fa-image
                   -# %i.fas.fa-file-upload.add
             = i.file_field :image, multiple: true, class: "image", style: "display:none;", id: "file", 'data-image':0, name: "job[images_attributes][0][image]"
-        
-        
-          -# .field.image
-          -#   = form_with(model: @blog, local: true) do |form|
-          -#     = form.label 'サムネイル（スクリーンショットなど）'
-          -#     -# id "file"で、fileとdivを紐付けクリック時に連動
-          -#     #img_field{:onclick => "$('#file').click()"}
-          -#       -# 画像があるときは画像を表示する
-          -#       - if @blog.image.url.present?
-          -#         = image_tag(@blog.image.url)
-          -#       - else
-          -#         %i.fas.fa-image
-          -#         %i.fas.fa-file-upload.add
-          -#     -# id "file"をつけ、「display:none;」で隠す
-          -#     #{form.file_field :image, class: "image", style: "display:none;", id: "file"}
-
-
-        = f.submit "掲載する", id:"post"
-        -# - binding.pry
-        -# =link_to image_path, class: "send__main__content__form__box7__return" do
-        -#   もどる
-
+        .btn-field
+          = f.submit "掲載する", id:"submit-btn"
+          #cancel-btn
+            = link_to root_path, id:"" do
+              キャンセル
   = render partial: "layouts/footer"
