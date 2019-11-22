@@ -3,7 +3,7 @@
   position: relative;
 }
 .new-btn {
-  background-color: rgb(234,53,45);
+  background-color: brown;
   border-radius: 50px;
   position: fixed;
   height: 100px;
@@ -17,7 +17,7 @@
   }
   &__icon {
     color: white;
-    margin: 10px auto 0;
+    margin: 8px auto 0;
     font-size: 30px;
   }
   &__text {
@@ -59,7 +59,6 @@
       }
       &__img {
         height: 180px;
-        background-color: brown;
       }
       &__text {
         padding: 6px 12px;
