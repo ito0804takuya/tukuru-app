@@ -14,7 +14,7 @@
       .body__box
         - @all_jobs.each do |job|
           .body__box__job
-            = link_to root_path do
+            = link_to job_path(job.id) do
               .body__box__job__img
                 - if Rails.env.development?
                   = image_tag "/uploads/image/image/#{job.images.ids[0]}/"+job.images[0][:image], size:'230x180'

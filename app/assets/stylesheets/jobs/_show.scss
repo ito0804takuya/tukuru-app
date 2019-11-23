@@ -1,0 +1,82 @@
+.show {
+  background-color: #f7f7f7;
+  height: 100%;
+  padding: 120px 0 40px;
+  width: 100%;
+  &__title {
+    color: rgb(87, 87, 87);
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    width: 1000px;
+  }
+  &__box {
+    background-color: white;
+    border: 1px solid #eae6dc;
+    border-radius: 20px;
+    display: flex;
+    padding: 25px;
+    margin: 0 auto 20px;
+    width: 1000px;
+    &__head {
+      &__title {
+        font-size: 20px;
+        font-weight: bold;
+        height: 30px;
+        line-height: 30px;
+      }
+      &__img-box {
+        border: 1px solid #eae6dc;
+        margin: 10px 0;
+      }
+    }
+    &__detail {
+      font-size: 15px;
+      margin: 40px auto 0;
+      padding: 0 0 0 5px;
+      width: 440px;
+      &__title {
+        font-size: 15px;
+        font-weight: bold;
+        height: 25px;
+        line-height: 25px;
+        margin: 0 0 5px;
+      }
+      &__text {
+        height: 20px;
+        line-height: 20px;
+        margin: 0 0 5px 10px;
+        padding: 0 0 0 5px;
+      }
+      &__body {
+        margin: 0 0 5px 10px;
+        padding: 0 0 0 5px;
+      }
+    }
+  }
+  &__contact {
+    background-color: white;
+    border: 1px solid #eae6dc;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 0 auto;
+    width: 1000px;
+    &__title {
+      font-size: 15px;
+      font-weight: bold;
+      height: 25px;
+      line-height: 25px;
+      margin: 0 0 5px;
+      width: 200px;
+    }
+    &__text {
+      height: 20px;
+      line-height: 20px;
+      margin: 0 0 5px 10px;
+      padding: 0 0 0 5px;
+      width: 500px;
+    }
+  }
+}
