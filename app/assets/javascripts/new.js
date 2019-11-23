@@ -1,7 +1,7 @@
 // window.addEventListener("load", function () {
 // $(function(){
-// $(document).on('turbolinks:load', function() {
-window.onload = function(){
+$(document).on('turbolinks:load', function() {
+// window.onload = function(){
 // window.onload = jQuery(function($){ 
   let fileField = $('#file');
   
@@ -25,5 +25,6 @@ window.onload = function(){
       };
     })(file);
     reader.readAsDataURL(file);
+    console.log("test")
   });
-};
+});

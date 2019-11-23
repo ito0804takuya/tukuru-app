@@ -39,7 +39,7 @@
         .show__box__detail__title
           仕事の詳細
         .show__box__detail__body
-          #{@job.body}
+          = simple_format(@job.body)
     .show__title
       連絡先
     .show__contact

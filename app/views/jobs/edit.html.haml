@@ -1,1 +1,68 @@
-hello
+.wrapper
+  = render partial: "layouts/header"
+  .newjob
+    .newjob__head 求人の情報を入力してください
+    .newjob__box
+      = form_with( model: @job, url: {action: "update"}, local: true) do |f|
+        .newjob__box__company-name
+          .newjob__box__title#title
+            企業名
+          .newjob__box__name
+            #{current_company.name}
+        .newjob__box__title
+          = f.label :求人の題名, id:"title"
+          %span#mark 必須
+        = f.text_field :name, class:"newjob-form", placeholder: "例）半導体のアセンブリ加工"
+        .newjob__box__title
+          = f.label :求人の詳細, id:"title"
+          %span#mark 必須
+        = f.text_area :body, class:"newjob-textarea", placeholder: "求人の詳細を記入してください"
+        .newjob__box__title
+          = f.label :電話番号, id:"title"
+          %span#mark 必須
+        = f.text_field :tel, class:"newjob-form", placeholder: "例）080-1234-5678"
+        .newjob__box__title
+          = f.label :メールアドレス, id:"title"
+          %span#mark 必須
+        = f.text_field :email, class:"newjob-form", placeholder: "例）abc@gmail.com"
+        .newjob__box__title
+          = f.label :関連情報URL, id:"title"
+        = f.text_field :url, class:"newjob-form", placeholder: "例）https://www.google.com"
+        .newjob__box__title
+          = f.label :郵便番号, id:"title"
+        = f.text_field :postal_code, class:"newjob-form", placeholder: "例）123-4567"
+        .newjob__box__title
+          = f.label :勤務地, id:"title"
+          %span#mark 必須
+        = f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {prompt: "---"}, {class: "newjob-select"} )
+        .newjob__box__title
+          = f.label :市町村, id:"title"
+          %span#mark 必須
+        = f.text_field :city, class:"newjob-form", placeholder: "例）大阪市"
+        .newjob__box__title
+          = f.label :番地, id:"title"
+          %span#mark 必須
+        = f.text_field :block, class:"newjob-form", placeholder: "例）〇〇区〇〇１丁目１ー２ー３"
+        .newjob__box__title
+          = f.label :ビル名, id:"title"
+        = f.text_field :bulding, class:"newjob-form", placeholder: "例）〇〇ビル２階"
+        .newjob__box__title
+          = f.label :画像, id:"title"
+          %span#mark 必須
+        .field-image
+          = f.fields_for :images do |i|
+            = i.label :image, id:"new-img" do
+              #img_field{onClick: "$('#file').click()"}
+                - if Rails.env.development?
+                  = image_tag "/uploads/image/image/#{@job.images.ids[0]}/"+@job.images[0][:image], size:'460x360'
+                - if Rails.env.production?
+                  = image_tag @job.images[0].image.url
+            = i.file_field :image, multiple: true, class: "image", style: "display:none;", id: "file", 'data-image':0, name: "job[images_attributes][0][image]"
+        .btn-field
+          = f.submit "変更する", id:"submit-btn"
+          #delete-btn
+            = link_to("削除する", job_path(@job.id), method: :delete)
+          #cancel-btn
+            = link_to job_path(@job.id) do
+              キャンセル
+  = render partial: "layouts/footer"

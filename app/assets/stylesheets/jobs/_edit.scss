@@ -1,0 +1,20 @@
+#delete-btn {
+  box-sizing: border-box;
+  background-color: rgb(65, 45, 248);
+  border-color: rgb(216, 216, 216);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 40px;
+  margin: 0 20px 0 0;
+  text-align: center;
+  width: 100px;
+  a {
+    display: block;
+    color: white;
+    line-height: 40px;
+    border: none;
+    text-decoration: none;
+  }
+}
