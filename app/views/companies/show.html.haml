@@ -1,0 +1,14 @@
+.wrapper
+  = render partial: "layouts/header"
+  .mypage
+    .mypage__box
+      .mypage__box__title 企業名
+      .mypage__box__detail #{current_company.name}
+      .mypage__box__title メールアドレス
+      .mypage__box__detail #{current_company.email}
+      .mypage__box__btn
+        = link_to(edit_company_registration_path, class:"mypage__box__btn__edit-btn") do
+          編集
+        = link_to(destroy_company_session_path, method: :delete, class:"mypage__box__btn__logout-btn") do
+          ログアウト
+  = render partial: "layouts/footer"
