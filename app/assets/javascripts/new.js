@@ -1,11 +1,6 @@
-// window.addEventListener("load", function () {
-// $(function(){
 $(document).on('turbolinks:load', function() {
-// window.onload = function(){
-// window.onload = jQuery(function($){ 
   let fileField = $('#file');
   
-  // 選択された画像を取得し表示
   $(fileField).on('change', fileField, function(e) {
     file = e.target.files[0]
     
