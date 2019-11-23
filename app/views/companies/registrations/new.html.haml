@@ -2,13 +2,22 @@
   = render partial: "layouts/header"
   .signup
     .signup__box
-      .signup__box__title ログイン（求人を掲載される方）
+      .signup__box__title 新規登録
       .signup__box__body
-        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-          .field.loginwidth
-            = f.email_field :email, autofocus: true, autocomplete: "email", class: "textfield", placeholder: "メールアドレス"
-          .field.loginwidth
-            = f.password_field :password, autocomplete: "new-password", class: "textfield", placeholder: "パスワード"
-          .registry-box__content__box__robot.session__robot
-          = f.submit "ログイン", class: "submit-btn"
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = render "devise/shared/error_messages", resource: resource
+          .field
+            = f.label :name, "企業名", class: "signup-label"
+            = f.text_field :name, autofocus: true, autocomplete: "name", class: "textfield", placeholder: "例）ものづくり株式会社"
+          .field
+            = f.label :email, "メールアドレス", class: "signup-label"
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: "textfield", placeholder: "例）abc@gmail.com"
+          .field
+            = f.label :password, "パスワード", class: "signup-label"
+            = f.password_field :password, autocomplete: "new-password", class: "textfield", placeholder: "6文字以上"
+          .field
+            = f.label :password_confirmation, "パスワード（確認）", class: "signup-label"
+            = f.password_field :password_confirmation, autocomplete: "new-password", class: "textfield", placeholder: "6文字以上"
+          .actions
+            = f.submit "登録", class: "submit-btn"
   = render partial: "layouts/footer"

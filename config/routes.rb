@@ -11,5 +11,7 @@ Rails.application.routes.draw do
     registrations: 'seekers/registrations'
   }
   resources :companies, only: [:show]
+  resources :seekers, only: [:show]
+  resources :users, only: [:new]
   resources :jobs
 end

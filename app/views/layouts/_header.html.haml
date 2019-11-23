@@ -14,7 +14,4 @@
         = link_to("マイページ", seeker_path(current_seeker.id), class:"signup-btn")
     - else
       .header__bar__signup
-        = link_to("新規登録（求人を掲載される方）", new_company_session_path, class:"signup-btn")
-        = link_to("新規登録（求人をお探しの方）", new_seeker_session_path, class:"signup-btn")
-        = link_to("ログイン（求人を掲載される方）", new_company_registration_path, class:"signup-btn")
-        = link_to("ログイン（求人をお探しの方）", new_seeker_registration_path, class:"signup-btn")
+        = link_to("TUKURUを使う", new_user_path, class:"signup-btn")
