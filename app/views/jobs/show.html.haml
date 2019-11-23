@@ -1,0 +1,58 @@
+.wrapper
+  = render partial: "layouts/header"
+  - if company_signed_in?
+    .new-btn
+      = link_to edit_job_path do
+        .new-btn__icon
+          = fa_icon 'edit'
+        .new-btn__text
+          求人情報を
+          %br
+          編集する
+  .show
+    .show__title
+      求人の詳細
+    .show__box
+      .show__box__head
+        .show__box__head__title
+          #{@job.name}
+        .show__box__head__img-box
+          - if Rails.env.development?
+            = image_tag "/uploads/image/image/#{@job.images.ids[0]}/"+@job.images[0][:image], size:'460x360'
+          - if Rails.env.production?
+            = image_tag @job.images[0].image.url
+      .show__box__detail
+        .show__box__detail__title
+          企業名
+        .show__box__detail__text
+          #{@job.company.name}
+        .show__box__detail__title
+          勤務地
+        .show__box__detail__text
+          〒#{@job.postal_code}
+        .show__box__detail__text
+          #{@job.prefecture.name}#{@job.city}#{@job.block}#{@job.bulding}
+        .show__box__detail__title
+          関連URL
+        .show__box__detail__text
+          =link_to "#{@job.url}", "#{@job.url}" 
+        .show__box__detail__title
+          仕事の詳細
+        .show__box__detail__body
+          #{@job.body}
+    .show__title
+      連絡先
+    .show__contact
+      .show__contact__title
+        企業名
+      .show__contact__text
+        #{@job.company.name}
+      .show__contact__title
+        電話番号
+      .show__contact__text
+        #{@job.tel}
+      .show__contact__title
+        メールアドレス
+      .show__contact__text
+        #{@job.email}
+  = render partial: "layouts/footer"
