@@ -39,15 +39,25 @@
   text-decoration: none;
   width: 200px;
 }
+.tukuru-logo:hover {
+  color: black;
+  text-decoration: none;
+}
 .search-icon {
   font-size: 20px;
 }
 .signup-btn {
+  background-color: brown;
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
+  color: white;
   padding: 8px 10px;
   text-align: center;
   text-decoration: none;
   width: 100px;
+}
+.signup-btn:hover {
+  color: white;
+  text-decoration: none;
 }

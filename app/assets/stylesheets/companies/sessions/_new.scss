@@ -1,0 +1,50 @@
+.signup {
+  background-color: #f7f7f7;
+  height: calc(100vh - 80px);
+  padding: 150px 0 0;
+  width: 100%;
+  &__box {
+    background-color: white;
+    border: 1px solid #eae6dc;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 0 auto;
+    width: 450px;
+    &__title {
+      font-size: 20px;
+      font-weight: bold;
+      height: 50px;
+      line-height: 50px;
+    }
+    &__body {
+      margin: 0 auto;
+      width: 400px;
+    }
+  }
+}
+.signup-label {
+  font-size: 15px;
+}
+.textfield {
+  border: 1px solid #eae6dc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: 0;
+  padding: 8px 12px;
+  margin: 10px 0;  
+  width: 100%;
+}
+.submit-btn {
+  border: none;
+  border-radius: 6px;
+  background: brown;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  font-size: 15px;
+  outline: 0;
+  padding: 10px 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 132px;
+}

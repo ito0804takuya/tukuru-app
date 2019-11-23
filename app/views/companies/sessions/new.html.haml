@@ -1,17 +1,14 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "companies/shared/links"
+.wrapper
+  = render partial: "layouts/header"
+  .signup
+    .signup__box
+      .signup__box__title ログイン（求人を掲載される方）
+      .signup__box__body
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .field.loginwidth
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: "textfield", placeholder: "メールアドレス"
+          .field.loginwidth
+            = f.password_field :password, autocomplete: "new-password", class: "textfield", placeholder: "パスワード"
+          .registry-box__content__box__robot.session__robot
+          = f.submit "ログイン", class: "submit-btn"
+  = render partial: "layouts/footer"

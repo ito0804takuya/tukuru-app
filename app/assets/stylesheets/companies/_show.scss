@@ -1,0 +1,57 @@
+.mypage {
+  background-color: #f7f7f7;
+  height: calc(100vh - 80px);
+  padding: 120px 0 0;
+  width: 100%;
+  &__box {
+    background-color: white;
+    border: 1px solid #eae6dc;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 0 auto;
+    width: 450px;
+    &__title {
+      font-size: 15px;
+      font-weight: bold;
+      height: 30px;
+      line-height: 30px;
+    }
+    &__detail {
+      font-size: 15px;
+      height: 30px;
+      margin: 0 auto;
+      padding: 0 0 0 5px;
+      width: 400px;
+    }
+    &__btn {
+      display: flex;
+      margin: 5px 0 0;
+      &__edit-btn {
+        box-sizing: border-box;
+        background-color: burlywood;
+        border: 1px solid #eae6dc;
+        border-radius: 4px;
+        color: white;
+        margin: 0 20px 0 0;
+        padding: 8px 10px;
+        height: 40px;
+        width: 100px;
+        text-align: center;
+        text-decoration: none;
+      }
+      &__logout-btn {
+        box-sizing: border-box;
+        background-color: rgb(201, 201, 201);
+        border: 1px solid #eae6dc;
+        border-radius: 4px;
+        color: white;
+        margin: 0 20px 0 0;
+        padding: 8px 10px;
+        height: 40px;
+        width: 100px;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+  }
+}

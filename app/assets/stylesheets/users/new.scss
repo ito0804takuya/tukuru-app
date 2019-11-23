@@ -1,0 +1,36 @@
+.enter {
+  background-color: #f7f7f7;
+  height: calc(100vh - 80px);
+  padding: 150px 0 0;
+  width: 100%;
+  &__container {
+    display: flex;
+    margin: 0 auto;
+    width: 700px;
+  }
+  &__box {
+    background-color: white;
+    border: 1px solid #eae6dc;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 0 20px;
+    width: 300px;
+    &__title {
+      font-size: 20px;
+      font-weight: bold;
+      height: 50px;
+      line-height: 50px;
+      margin: 0 auto;
+      text-align: center;
+      width: 200px;
+    }
+    &__body {
+      display: flex;
+      margin: 0 auto;
+      width: 200px;
+    }
+  }
+}
+.user-btn {
+  margin: 5px auto 10px;
+}

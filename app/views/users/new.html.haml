@@ -1,0 +1,19 @@
+.wrapper
+  = render partial: "layouts/header"
+  .enter
+    .enter__container
+      .enter__box
+        .enter__box__title 求人を掲載される方
+        .enter__box__body
+          .user-btn
+            = link_to("新規登録", new_company_registration_path, class:"signup-btn")
+          .user-btn
+            = link_to("ログイン", new_company_session_path, class:"signup-btn")
+      .enter__box
+        .enter__box__title 求人をお探しの方
+        .enter__box__body
+          .user-btn
+            = link_to("新規登録", new_seeker_registration_path, class:"signup-btn")
+          .user-btn
+            = link_to("ログイン", new_seeker_session_path, class:"signup-btn")
+  = render partial: "layouts/footer"
