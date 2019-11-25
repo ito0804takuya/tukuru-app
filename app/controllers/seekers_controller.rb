@@ -1,4 +1,5 @@
 class SeekersController < ApplicationController
+  before_action :authenticate_seeker!, except: [:new]
   before_action :seeker_params, only: [:show] 
 
   def show

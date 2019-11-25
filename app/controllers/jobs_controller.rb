@@ -1,8 +1,9 @@
 class JobsController < ApplicationController
+  before_action :authenticate_company!, except: [:index, :show]
   before_action :find_job, only: [:show, :edit, :update, :destroy]
 
   def index
-    @all_jobs = Job.all.page(params[:page]).per(4).order('updated_at DESC')
+    @all_jobs = Job.all.page(params[:page]).per(16).order('updated_at DESC')
   end
 
   def new
