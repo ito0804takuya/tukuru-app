@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function() {
-  let fileField = $('#file');
+  fileField = $('#file');
   
   $(fileField).on('change', fileField, function(e) {
     file = e.target.files[0]
