@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+  before_action :authenticate_company!, except: [:new]
   before_action :company_params, only: [:show] 
 
   def show
