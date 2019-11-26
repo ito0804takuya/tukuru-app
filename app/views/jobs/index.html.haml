@@ -19,7 +19,7 @@
                 - if Rails.env.development?
                   = image_tag "/uploads/image/image/#{job.images.ids[0]}/"+job.images[0][:image], size:'230x180'
                 - if Rails.env.production?
-                  = image_tag job.images[0].image.url
+                  = image_tag job.images[0].image.url, size:'230x180'
               .body__box__job__text
                 .body__box__job__text__name
                   = job.name
