@@ -1,6 +1,6 @@
 .wrapper
   = render partial: "layouts/header"
-  - if company_signed_in?
+  - if @job.company_id == current_company.id 
     .new-btn
       = link_to edit_job_path do
         .new-btn__icon
